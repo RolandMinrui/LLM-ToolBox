@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=0 python ../examples/sft_with_trl.py \
     --model_name_or_path="meta-llama/Llama-2-7b-hf" \
     --dataset_name timdettmers/openassistant-guanaco \
     --dataset_text_field="text" \
-    --output_dir="../output_models/openassistant-llama2-qlora" \
+    --output_dir="../output_models/openassistant-llama2-full" \
     --learning_rate=1e-5 \
     --per_device_train_batch_size=1 \
     --gradient_accumulation_steps=1 \
@@ -11,11 +11,7 @@ CUDA_VISIBLE_DEVICES=0 python ../examples/sft_with_trl.py \
     --warmup_ratio=0.03 \
     --max_seq_length 1024 \
     --lr_scheduler_type="cosine" \
-    --bf16 \
     --gradient_checkpointing \
-    --use_peft \
-    --lora_r=64 \
-    --lora_alpha=16 \
     --report_to="wandb" \
-    --run_name="qlora_openassistant-guanaco" \
+    --run_name="full_openassistant-guanaco" \
     --logging_steps=10 \

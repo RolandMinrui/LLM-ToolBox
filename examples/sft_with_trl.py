@@ -58,6 +58,7 @@ from trl.commands.cli_utils import init_zero_verbose, SFTScriptArguments, TrlPar
 from trl.env_utils import strtobool
 
 TRL_USE_RICH = strtobool(os.getenv("TRL_USE_RICH", "0"))
+os.environ["WANDB_PROJECT"]="TEMG4950"
 
 if TRL_USE_RICH:
     init_zero_verbose()
@@ -145,6 +146,12 @@ if __name__ == "__main__":
             peft_config=get_peft_config(model_config),
             callbacks=[RichProgressCallback] if TRL_USE_RICH else None,
         )
+
+        # Print trainable parameters
+        if model_config.use_peft: 
+            print("#" * 50)
+            trainer.model.print_trainable_parameters()
+            print("#" * 50)
 
     trainer.train()
 
