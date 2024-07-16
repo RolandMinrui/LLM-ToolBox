@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0 python ../examples/sft_with_trl.py \
+CUDA_VISIBLE_DEVICES=7 python ../examples/sft_with_trl.py \
     --model_name_or_path="meta-llama/Llama-2-7b-hf" \
     --dataset_name timdettmers/openassistant-guanaco \
     --dataset_text_field="text" \
@@ -19,3 +19,4 @@ CUDA_VISIBLE_DEVICES=0 python ../examples/sft_with_trl.py \
     --report_to="wandb" \
     --run_name="qlora_openassistant-guanaco" \
     --logging_steps=10 \
+    # --load_in_8bit \

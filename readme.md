@@ -1,3 +1,5 @@
+# TEMG4950N: Meta LLaMA 3 Strategy for Viu International
+This repo is designed for HKUST TEMG4950N courses.
 ## Quick Start
 ### Environment Setup
 ```
@@ -17,4 +19,21 @@ pip install peft
 pip install vllm
 pip install jsonlines
 pip install wandb
+pip install bitsandbytes
 ```
+## Resources
+### General
+* [LLM-ToolBox](https://github.com/RolandMinrui/LLM-ToolBox): tailor-made github repo for TEMG4950N
+* [HF Transformers](https://huggingface.co/docs/transformers/index): state-of-the-art LLMs library.
+* [HF TRL](https://github.com/huggingface/trl): easy-to-use library for fine-tuning LLMs.
+* [Meta Llama](https://llama.meta.com/docs/get-started/): official guidelines to Meta Llama series.
+### Datasets
+* [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json): contain 52K instruction-following data.
+* [OpenAssistant Guanaco](https://huggingface.co/datasets/timdettmers/openassistant-guanaco): contain 10K high quality conversation & chat data.
+### Prompting
+* [https://www.promptingguide.ai/](https://www.promptingguide.ai/): a comprehensive guide to prompt engineering of language models.
+### Fine-tuning
+### Inference
+* [vLLM](https://docs.vllm.ai/en/latest/): a fast and easy-to-use library for LLMs inference.
+### Deployment
+* [Ollama](https://ollama.com/)

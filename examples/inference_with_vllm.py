@@ -24,6 +24,10 @@ def arg_parser():
                         type=int, 
                         default=128, 
                         help="max number of newly generated tokens")
+    parser.add_argument("--temperatures", 
+                        type=float, 
+                        default=0, 
+                        help="temperature for generation")
     args = parser.parse_args()
 
     return args
