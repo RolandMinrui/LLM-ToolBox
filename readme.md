@@ -31,7 +31,7 @@ pip install bitsandbytes
 * [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca/blob/main/alpaca_data.json): contain 52K instruction-following data.
 * [OpenAssistant Guanaco](https://huggingface.co/datasets/timdettmers/openassistant-guanaco): contain 10K high quality conversation & chat data.
 ### Prompting
-* [https://www.promptingguide.ai/](https://www.promptingguide.ai/): a comprehensive guide to prompt engineering of language models.
+* [Prompt Engineering Guide](https://www.promptingguide.ai/): a comprehensive guide to prompt engineering of language models.
 ### Fine-tuning
 ### Inference
 * [vLLM](https://docs.vllm.ai/en/latest/): a fast and easy-to-use library for LLMs inference.

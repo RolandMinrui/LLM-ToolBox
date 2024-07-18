@@ -10,7 +10,7 @@ def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name_or_path", 
                         type=str, 
-                        default="meta-llama/Llama-2-7b-hf", 
+                        default="mistralai/Mistral-7B-v0.1", 
                         help="model name or path for inference")
     parser.add_argument("--dataset_path", 
                         type=str, 
@@ -45,7 +45,8 @@ def main():
     print(f"The model is {args.model_name_or_path}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True)
 
-    model = LLM(model=args.model_name_or_path)
+    model = LLM(model=args.model_name_or_path, 
+                dtype="bfloat16")
     sampling_params = SamplingParams(temperature=0, 
                                      max_tokens=args.max_tokens,
                                      stop_token_ids=[tokenizer.eos_token_id])
